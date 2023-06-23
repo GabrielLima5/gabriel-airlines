@@ -1,4 +1,4 @@
-# gabriel-airlines-website
+# gabriel-airlines
 Um website completo e responsivo da companhia aérea Gabriel Airlines (empresa fictícia e de minha autoria), onde o usuário pode reservar passagens aéreas, obter informações sobre a frota de aeronaves da empresa, destinos em que essa empresa opera, fazer login na plataforma e enviar um formulário de contato para a empresa.
 
 O desenvolvimento desse site me possibilitou praticar coisas como:
@@ -63,3 +63,5 @@ A seguir, veja algumas imagens do site:
 <p align="center">
   <img src="https://github.com/GabrielLima5/imagens-projetos/blob/main/images/Login%20GA.png">
 </p>
+
+<p align="center">Acesse a aplicação diretamente clicando <a href="https://gabriellima5.github.io/gabriel-airlines/">aqui</a>.</p>
