@@ -25,8 +25,8 @@
                         <li><a href="#">Comprar passagem</a></li>
                         <li><a href="Frota Gabriel Airlines/index.html">Nossa frota</a></li>
                         <li><a href="Destinos Gabriel Airlines/index.html">Nossos destinos</a></li>
-                        <li><a href="Tela de Login Gabriel Airlines/index.html">Login</a></li>
                         <li><a href="Contato Gabriel Airlines/index.html">Contato</a></li>
+                        <li><a href="Tela de Login Gabriel Airlines/index.html">Login</a></li>
                     </ul>   
                 </nav>
             </div>
@@ -160,7 +160,7 @@
                     <div class="origin-and-destination">
                         <span class="from-text">São Paulo (GRU)</span>
                         <i class="fa-solid fa-arrow-right fa-2x"></i>
-                        <i class="fa-sharp fa-solid fa-arrow-down fa-2x"></i>
+                        <i class="fa-sharp fa-solid fa-arrow-down fa-2x" id="arrow-down"></i>
                         <span class="to-text">Fortaleza (FOR)</span>
                     </div>
 
@@ -187,6 +187,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -223,6 +224,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -259,6 +261,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -295,6 +298,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -331,6 +335,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -367,6 +372,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -425,6 +431,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -461,6 +468,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -497,6 +505,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -533,6 +542,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -569,6 +579,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -605,6 +616,7 @@
                                         <span class="price-number"></span>
                                         <span>,00</span>
                                     </div>
+                                    <div class="total-price"></div>
                                     <button type="button" class="select-ticket">Selecionar</button>
                                 </div>
                             </div>
@@ -1726,6 +1738,8 @@
                                     <span class="price-number">1300</span>
                                     <span>(por pessoa)</span>
                                 </div>
+
+                                <div class="total-price-final"></div>
                             </div>
 
                             <div class="return-flight-info hide">
@@ -1764,6 +1778,8 @@
                                     <span class="price-number">1300</span>
                                     <span>(por pessoa)</span>
                                 </div>
+
+                                <div class="total-price-final"></div>
                             </div>
 
                             <div class="passengers">
@@ -1772,7 +1788,16 @@
                             </div>
                             
                             <div class="final-price">
-                                <span class="calc-price"></span>
+                                <div class="calc-price">
+                                    <div class="calc-price-going">
+                                        <div>Ida</div>
+                                        <div class="going-value"></div>
+                                    </div>
+                                    <div class="calc-price-return">
+                                        <div>Volta</div>
+                                        <div class="return-value"></div>
+                                    </div>
+                                </div>
                                 <span class="final-price-number">R$1380</span>
                             </div>
 

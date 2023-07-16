@@ -46,6 +46,7 @@ const returnInfo = document.querySelector(".return-flight-info");
 const seats = document.querySelectorAll("input[type=checkbox]");
 const calcPrice = document.querySelector(".calc-price");
 const seatAlertSpan = document.querySelector(".seat-alert");
+const totalPriceEl = document.querySelectorAll('.total-price')
 
 let randomFlight1 = getRandomInt(1000, 9999);
 let randomFlight2 = getRandomInt(1000, 9999);
@@ -3839,8 +3840,63 @@ function showPreload(i){
 
 }
 
-function goingTicketsPageContent(){
+function showTotalPrice(el, index){
+    if (passengersInput.value == 1){
+        return
+    } else {
+        switch(index){
+            case 0:
+                el.innerHTML = `R$${eval(randomPrice1 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 1:
+                el.innerHTML = `R$${eval(randomPrice2 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 2:
+                el.innerHTML = `R$${eval(randomPrice3 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 3:
+                el.innerHTML = `R$${eval(randomPrice4 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 4:
+                el.innerHTML = `R$${eval(randomPrice5 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 5:
+                el.innerHTML = `R$${eval(randomPrice6 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 6:
+                el.innerHTML = `R$${eval(randomPrice7 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 7:
+                el.innerHTML = `R$${eval(randomPrice8 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 8:
+                el.innerHTML = `R$${eval(randomPrice9 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 9:
+                el.innerHTML = `R$${eval(randomPrice10 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 10:
+                el.innerHTML = `R$${eval(randomPrice11 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+    
+            case 11:
+                el.innerHTML = `R$${eval(randomPrice12 * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+                break;
+        }
+    }
+}
 
+function goingTicketsPageContent(){
     reDoSearch.addEventListener('click', e => {
         document.location.reload(true)
     });
@@ -3861,6 +3917,10 @@ function goingTicketsPageContent(){
         randomPriceNumber(price, index)
     });
 
+    totalPriceEl.forEach((el, index) => {
+        showTotalPrice(el, index)
+    })
+
     departureTime.forEach((time, index) => {
         departureRandomHour(time, index)
     });
@@ -3868,6 +3928,8 @@ function goingTicketsPageContent(){
     arrivalTime.forEach((time, index) => {
         arrivalHour1(time, index)
     });
+
+    showTotalPrice()
 
     travelDate.innerHTML = `${dateFormat(departureDate.value)}`
 }
@@ -3906,18 +3968,16 @@ function returnTicketsPageContent(){
 
 function finalPrice(){
     if (radioRoundtrip.checked){
-
-        calcPrice.innerHTML = `
-        Preço final para ${passengersInput.value} passageiros: <br>
-        Ida: R$${priceNumber[12].innerHTML} x ${passengersInput.value} = ${eval((priceNumber[12].innerHTML * passengersInput.value))} <br>
-        Volta: R$${priceNumber[13].innerHTML} x ${passengersInput.value} = ${eval((priceNumber[13].innerHTML * passengersInput.value))} <br>
-        Total: ${finalPriceNumberEl.innerHTML}`
+        const goingValueEl = document.querySelector('.going-value')
+        const returnValueEl = document.querySelector('.return-value')
+        goingValueEl.innerHTML = `R$${eval(parseInt(priceNumber[12].innerHTML) * passengersInput.value)},00`
+        returnValueEl.innerHTML = `R$${eval(parseInt(priceNumber[13].innerHTML) * passengersInput.value)},00`
         
         finalPriceNumberEl.innerHTML = `R$ ${eval((priceNumber[12].innerHTML * passengersInput.value) + (priceNumber[13].innerHTML * passengersInput.value))}`
     
     } else {
 
-        calcPrice.innerHTML = passengersInput.value == 1 ? `Preço final para ${passengersInput.value} passageiro:` : `Preço final para ${passengersInput.value} passageiros:`
+        calcPrice.innerHTML = passengersInput.value == 1 ? `Preço final para 1 passageiro:` : `Preço final para ${passengersInput.value} passageiros:`
         
         finalPriceNumberEl.innerHTML = `R$ ${eval(priceNumber[12].innerHTML * passengersInput.value)}`
     }
@@ -3959,6 +4019,8 @@ function selectSeats(btn){
 
 function seatsMapPageContent(index){
     
+    const finalPriceTotalEl = document.querySelectorAll('.total-price-final')
+
     if (radioRoundtrip.checked){
         removeClass(returnPanel, "hide")
     }
@@ -3972,7 +4034,14 @@ function seatsMapPageContent(index){
     fromText[15].innerHTML = to.value;
     toText[14].innerHTML = to.value;
     toText[15].innerHTML = from.value;
-    //document.querySelector(".total-price").innerHTML = `Preço final para ${passengersInput.value} passageiros:`
+
+    function showFinalPrice(i, index){
+        if (passengersInput.value == 1){
+            return
+        } else {
+            finalPriceTotalEl[i].innerHTML = `R$${eval(parseInt(priceNumber[index].innerText) * passengersInput.value)},00 para ${passengersInput.value} passageiros`
+        }
+    }
 
     switch(index){
         case 0:
@@ -3980,6 +4049,7 @@ function seatsMapPageContent(index){
             departureTime[12].innerHTML = departureTime[0].innerHTML;
             arrivalTime[12].innerHTML = arrivalTime[0].innerHTML;
             priceEl[12].innerHTML = priceNumber[0].innerHTML;
+            showFinalPrice(0, 0)
             break;
 
         case 1:
@@ -3987,6 +4057,7 @@ function seatsMapPageContent(index){
             departureTime[12].innerHTML = departureTime[1].innerHTML;
             arrivalTime[12].innerHTML = arrivalTime[1].innerHTML;
             priceEl[12].innerHTML = priceNumber[1].innerHTML;
+            showFinalPrice(0, 1)
             break;
 
         case 2:
@@ -3994,6 +4065,7 @@ function seatsMapPageContent(index){
             departureTime[12].innerHTML = departureTime[2].innerHTML;
             arrivalTime[12].innerHTML = arrivalTime[2].innerHTML;
             priceEl[12].innerHTML = priceNumber[2].innerHTML;
+            showFinalPrice(0, 2)
             break;
 
         case 3:
@@ -4001,6 +4073,7 @@ function seatsMapPageContent(index){
             departureTime[12].innerHTML = departureTime[3].innerHTML;
             arrivalTime[12].innerHTML = arrivalTime[3].innerHTML;
             priceEl[12].innerHTML = priceNumber[3].innerHTML;
+            showFinalPrice(0, 3)
             break;
 
         case 4:
@@ -4008,6 +4081,7 @@ function seatsMapPageContent(index){
             departureTime[12].innerHTML = departureTime[4].innerHTML;
             arrivalTime[12].innerHTML = arrivalTime[4].innerHTML;
             priceEl[12].innerHTML = priceNumber[4].innerHTML;
+            showFinalPrice(0, 4)
             break;
 
         case 5:
@@ -4015,6 +4089,7 @@ function seatsMapPageContent(index){
             departureTime[12].innerHTML = departureTime[5].innerHTML;
             arrivalTime[12].innerHTML = arrivalTime[5].innerHTML;
             priceEl[12].innerHTML = priceNumber[5].innerHTML;
+            showFinalPrice(0, 5)
             break;
 
         case 6:
@@ -4022,6 +4097,7 @@ function seatsMapPageContent(index){
             departureTime[13].innerHTML = departureTime[6].innerHTML;
             arrivalTime[13].innerHTML = arrivalTime[6].innerHTML;
             priceEl[13].innerHTML = priceNumber[6].innerHTML;
+            showFinalPrice(1, 6)
             break;
 
         case 7:
@@ -4029,6 +4105,7 @@ function seatsMapPageContent(index){
             departureTime[13].innerHTML = departureTime[7].innerHTML;
             arrivalTime[13].innerHTML = arrivalTime[7].innerHTML;
             priceEl[13].innerHTML = priceNumber[7].innerHTML;
+            showFinalPrice(1, 7)
             break;
 
         case 8:
@@ -4036,6 +4113,7 @@ function seatsMapPageContent(index){
             departureTime[13].innerHTML = departureTime[8].innerHTML;
             arrivalTime[13].innerHTML = arrivalTime[8].innerHTML;
             priceEl[13].innerHTML = priceNumber[8].innerHTML;
+            showFinalPrice(1, 8)
             break;
 
         case 9:
@@ -4043,6 +4121,7 @@ function seatsMapPageContent(index){
             departureTime[13].innerHTML = departureTime[9].innerHTML;
             arrivalTime[13].innerHTML = arrivalTime[9].innerHTML;
             priceEl[13].innerHTML = priceNumber[9].innerHTML;
+            showFinalPrice(1, 9)
             break; 
 
         case 10:
@@ -4050,6 +4129,7 @@ function seatsMapPageContent(index){
             departureTime[13].innerHTML = departureTime[10].innerHTML;
             arrivalTime[13].innerHTML = arrivalTime[10].innerHTML;
             priceEl[13].innerHTML = priceNumber[10].innerHTML;
+            showFinalPrice(1, 10)
             break;
 
         case 11:
@@ -4057,6 +4137,7 @@ function seatsMapPageContent(index){
             departureTime[13].innerHTML = departureTime[11].innerHTML;
             arrivalTime[13].innerHTML = arrivalTime[11].innerHTML;
             priceEl[13].innerHTML = priceNumber[11].innerHTML;
+            showFinalPrice(1, 11)
             break;
     }
 }

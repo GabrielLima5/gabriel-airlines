@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@400;700&display=swap');
 
 *{
     box-sizing: border-box;
@@ -7,7 +7,8 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 1.2rem;
 }
 
 .container{
@@ -27,7 +28,8 @@ header > .header{
     color: white;
     width: inherit;
     height: inherit;
-    background-color: black;
+    background: #4b6cb7; 
+    background: linear-gradient(to right, #182848, #4b6cb7);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -136,7 +138,8 @@ section .city > button > a{
 footer{
     width: 100%;
     color: white;
-    background-color: black;
+    background: #4b6cb7; 
+    background: linear-gradient(to right, #182848, #263559);
     display: flex;
     justify-content: space-between;
 }
@@ -309,9 +312,11 @@ nav > ul > li > a:hover{
         position: fixed;
         top: 0;
         right: -80vw;
-        width: 80vw;
+        width: 230px;
+        font-size: 1.1rem;
         height: 100vh;
-        background-color: black;
+        background: #4b6cb7; 
+        background: linear-gradient(to right, #182848, #4b6cb7);
         margin: 0;
         transition: right .2s linear;
     }
@@ -331,7 +336,7 @@ nav > ul > li > a:hover{
         border: none;
         color: white;
         align-self: flex-start;
-        margin-left: 30px;
+        margin-left: 10px;
     }
 
     header .menu.open ul{
@@ -357,9 +362,8 @@ nav > ul > li > a:hover{
     }
 
     footer > .left-footer .footer-nav{
-        flex-direction: column;
-        align-items: center;
         margin-right: unset;
+        max-width: 100%;
     }
 }
 
@@ -377,6 +381,14 @@ nav > ul > li > a:hover{
     }
 }
 
+@media only screen and (max-width: 700px){
+    footer > .left-footer .footer-nav, 
+    footer > .right-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media only screen and (max-width: 500px){
     section .city p, section .city > .city-image, section .city > button{
         width: 300px;
@@ -384,6 +396,14 @@ nav > ul > li > a:hover{
     
     section .city > .city-image{
         height: unset;
+    }
+
+    footer > .right-footer .social-media-title{
+        text-align: center;
+    }
+
+    nav > ul{
+        justify-content: center;
     }
 }
 

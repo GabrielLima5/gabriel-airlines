@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@400;700&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -37,9 +38,10 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Ysabeau Infant", sans-serif;
   margin: 0;
   padding: 0;
+  font-size: 1.2rem;
 }
 
 .container {
@@ -57,7 +59,8 @@ header {
 
 header > .header {
   color: white;
-  background-color: black;
+  background: #4b6cb7; 
+  background: linear-gradient(to right, #182848, #4b6cb7);
   width: inherit;
   height: inherit;
   display: flex;
@@ -264,7 +267,7 @@ main > .tickets-menu > .redo-search > span{
 main > .tickets-menu > .flight-preview{
   margin-top: 50px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 main > .tickets-menu > .flight-preview > .origin-and-destination{
@@ -278,7 +281,7 @@ main > .tickets-menu > .flight-preview .fa-arrow-down{
 }
 
 main > .tickets-menu > .flight-preview span{
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 main > .tickets-menu > .flight-preview i,
@@ -300,6 +303,14 @@ main > .tickets-menu .flight-cards,
 main > .tickets-menu .one-way,
 main > .tickets-menu .return{
   width: 100%;
+}
+
+main > .tickets-menu .price-info .total-price{
+  font-size: 1rem;
+}
+
+main .total-price-final{
+  font-size: 1.2rem;
 }
 
 main > .tickets-menu .flight-cards{
@@ -357,7 +368,7 @@ main > .tickets-menu .flight-cards > .flight-card > .flight-info > .price-info >
 }
 
 main > .tickets-menu .flight-cards > .flight-card > .other-info{
-  font-size: 0.6em;
+  font-size: 0.7em;
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
@@ -446,7 +457,7 @@ main > .seats-menu > .seats-preview > .seats-map .seat > label{
   width: 40px;
   text-align: center;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1em;
   background-color: lightgreen;
   padding: 4px;
   border-radius: 5px;
@@ -532,6 +543,21 @@ main > .seats-menu > .seats-preview > .final-info > .final-flight-info .final-pr
   margin-top: 10px;
 }
 
+main > .seats-menu .calc-price{
+  display: flex;
+  flex-direction: column;
+}
+
+main > .seats-menu .calc-price .calc-price-going,
+main > .seats-menu .calc-price .calc-price-return{
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding: 5px;
+}
+
 main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info{
   display: flex;
   justify-content: space-between;
@@ -587,6 +613,7 @@ main > .seats-menu .flight-info-span{
 main > .seats-menu > .seats-preview > .final-info > .final-flight-info button{
   margin: 30px 0;
   width: 75%;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -598,7 +625,8 @@ main > .seats-menu > .seats-preview > .final-info > .final-flight-info button:di
 
 footer {
   color: white;
-  background-color: black;
+  background: #4b6cb7; 
+  background: linear-gradient(to right, #182848, #263559);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -706,7 +734,7 @@ nav > ul > li > a:hover {
   overflow: hidden;
   height: 100px;
   border-right: 2px solid white;
-  font-size: 7em;
+  font-size: 6.5em;
   animation: 
     typing 3s steps(20) infinite,
     cursor-animation 0.4s step-end infinite alternate;
@@ -757,10 +785,12 @@ nav > ul > li > a:hover {
     align-items: center;
     position: fixed;
     top: 0;
+    font-size: 1.1rem;
     right: -50vw;
-    width: 50vw;
+    width: 250px;
     height: 100vh;
-    background-color: black;
+    background: #4b6cb7;
+    background: linear-gradient(to right, #182848, #4b6cb7);
     margin: 0;
     transition: right 0.2s linear;
   }
@@ -866,14 +896,16 @@ nav > ul > li > a:hover {
     width: 500px;
   } 
 
-  footer > .left-footer .footer-nav,
-  footer > .right-footer {
-    flex-direction: column;
-    align-items: center;
+  footer > .left-footer .footer-nav{
+    max-width: 100%;
   }
 }
 
 @media only screen and (max-width: 1000px){
+
+  body {
+    font-size: 1rem;
+  }
   main > .tickets-menu,
   main > .tickets-menu .flight-cards{
     width: 700px;
@@ -944,6 +976,10 @@ nav > ul > li > a:hover {
 }
 
 @media only screen and (max-width: 700px){
+  body{
+    font-size: 1.1rem;
+  }
+
   .loading > .logo-image > img{
     width: 300px;
   }
@@ -955,6 +991,11 @@ nav > ul > li > a:hover {
   .loading > .loading-text > span.dots{
     height: 60px;
     font-size: 4em;
+  }
+
+  main > .tickets-menu > .flight-preview > .travel-date{
+    display: inline-block;
+    align-self: flex-start;
   }
 
   main > .tickets-menu,
@@ -1011,7 +1052,13 @@ nav > ul > li > a:hover {
   }
 
   main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info > i{
-    margin: 25px 0;
+    margin: 30px 0;
+  }
+
+  footer > .left-footer .footer-nav, 
+  footer > .right-footer {
+    flex-direction: column;
+    align-items: center;
   }
 
   footer > .right-footer > nav{
@@ -1085,6 +1132,22 @@ nav > ul > li > a:hover {
 }
 
 @media only screen and (max-width: 550px){
+  body{
+    font-size: 1.3rem;
+  }
+
+  main > .tickets-menu > .flight-preview > .travel-date{
+    align-self: center;
+  }
+
+  main > .tickets-menu > .flight-preview i{
+    margin: 10px 0;
+  }
+
+  main > .tickets-menu .flight-cards > .flight-card > .other-info{
+    font-size: 0.6em;
+  }
+
   main > .booking-menu .modal{
     width: 300px;
   }
@@ -1144,11 +1207,6 @@ nav > ul > li > a:hover {
 }
 
 @media only screen and (max-width: 500px) {
-  header > .header > nav > ul{
-    right: -80vw;
-    width: 80vw;
-  }
-
   main > .booking-menu > .mobile-desc{
     width: 260px;
   }
@@ -1185,7 +1243,12 @@ nav > ul > li > a:hover {
 
   .loading > .loading-text > span.dots{
     height: 40px;
-    font-size: 3em;
+    font-size: 2.5em;
+  }
+
+  header > .header > nav > ul{
+    right: -80vw;
+    width: 80vw;
   }
 
   main > .tickets-menu,
@@ -1208,6 +1271,14 @@ nav > ul > li > a:hover {
     width: 300px;
     font-size: 1em;
   } 
+
+  footer > .right-footer .social-media-title{
+    text-align: center;
+  }
+
+  nav > ul{
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 320px){

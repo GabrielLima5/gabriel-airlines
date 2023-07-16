@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -20,7 +21,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Ysabeau Infant", sans-serif;
+  font-size: 1.2rem;
 }
 
 .container {
@@ -40,7 +42,8 @@ header > .header {
   color: white;
   width: inherit;
   height: inherit;
-  background-color: black;
+  background: #4b6cb7; 
+  background: linear-gradient(to right, #182848, #4b6cb7);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,6 +79,7 @@ section > .frota > .cards {
   grid-template-columns: repeat(2, 1fr);
   gap: 100px 50px;
   margin-bottom: 100px;
+  line-height: 2.5rem;
 }
 
 section > .frota > .desc {
@@ -153,6 +157,14 @@ section > .frota .aircraft-description .modal > .modal-aircraft-desc{
   align-items: flex-start;
 }
 
+section > .frota .aircraft-title-modal{
+  margin-top: 200px;
+}
+
+section > .frota .a330-modal{
+  margin-top: 420px;
+}
+
 section > .frota .aircraft-description .modal .subtitle{
   font-size: 1.6em;
   font-weight: bold;
@@ -194,9 +206,11 @@ section > .frota .know-more-button:hover {
 footer {
   width: 100%;
   color: white;
-  background-color: black;
+  background: #4b6cb7; 
+  background: linear-gradient(to right, #182848, #263559);
   display: flex;
   justify-content: space-between;
+  line-height: 2.5rem;
 }
 
 footer > .left-footer {
@@ -258,11 +272,6 @@ ul {
   list-style: none;
 }
 
-ul > li {
-  margin-top: 15px;
-  margin-right: 15px;
-}
-
 nav > ul > li > a {
   color: white;
   text-decoration: none;
@@ -292,9 +301,10 @@ nav > ul > li > a:hover {
     position: fixed;
     top: 0;
     right: -80vw;
-    width: 80vw;
+    width: 230px;
     height: 100vh;
-    background-color: black;
+    background: #4b6cb7;
+    background: linear-gradient(to right, #182848, #4b6cb7);
     margin: 0;
     transition: right 0.2s linear;
   }
@@ -344,13 +354,15 @@ nav > ul > li > a:hover {
   }
 
   section > .frota .aircraft-title-modal{
-    margin-top: 50px;
+    margin-top: 100px;
   }
 
-  footer > .left-footer .footer-nav,
-  footer > .right-footer {
-    flex-direction: column;
-    align-items: center;
+  section > .frota .a330-modal{
+    margin-top: 250px;
+  }
+
+  footer > .left-footer .footer-nav{
+    max-width: 100%;
   }
 }
 
@@ -384,11 +396,11 @@ nav > ul > li > a:hover {
   }
 
   section > .frota .aircraft-title-modal{
-    margin-top: 350px;
+    margin-top: 750px;
   }
 
   section > .frota .a330 .aircraft-title-modal{
-    margin-top: 400px;
+    margin-top: 900px;
   }
 
   section > .frota .aircraft-description .modal .technical{
@@ -397,6 +409,12 @@ nav > ul > li > a:hover {
 
   section > .frota .aircraft-description .modal > img{
     width: 400px;
+  }
+
+  footer > .left-footer .footer-nav, 
+  footer > .right-footer {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -430,30 +448,47 @@ nav > ul > li > a:hover {
   }
 
   section > .frota .aircraft-title-modal{
-    margin-top: 800px;
+    margin-top: 1200px;
   }
 
   section > .frota .a330 .aircraft-title-modal{
-    margin-top: 1100px;
+    margin-top: 1400px;
+    font-size: 1.7em;
   }
 
   section > .frota .aircraft-description .modal .back-btn{
     margin-bottom: 100px;
+  }
+
+  footer > .right-footer .social-media-title{
+    text-align: center;
+  }
+
+  nav > ul{
+    justify-content: center;
   }
 }
 
 @media only screen and (max-width: 320px){
   section > .frota .aircraft-description .modal{
     width: 270px;
+    text-align: center;
   }
 
   section > .frota .aircraft-title-modal{
-    text-align: center;
-    margin-top: 1000px;
+    margin-top: 1500px;
   }
 
   section > .frota .a330 .aircraft-title-modal{
-    margin-top: 1200px;
+    margin-top: 1700px;
+  }
+  
+  section > .frota .aircraft-description .modal ul{
+    text-align: left;
+  }
+
+  section > .frota .aircraft-description .modal .subtitle{
+    text-align: center;
   }
 }
 
@@ -462,3 +497,31 @@ nav > ul > li > a:hover {
     height: 100vh;
   }
 }
+
+@media only screen and (max-height: 950px){
+  section > .frota .aircraft-description .modal{
+    height: 600px;
+  }
+}
+
+@media only screen and (max-height: 700px){
+  section > .frota .aircraft-description .modal{
+    height: 500px;
+  }
+}
+
+@media only screen and (max-height: 650px){
+  section > .frota .aircraft-title-modal{
+    margin-top: 500px;
+  }
+
+  section > .frota .a330 .aircraft-title-modal{
+    margin-top: 750px;
+  }
+}
+
+@media only screen and (max-height: 500px){
+  section > .frota .aircraft-description .modal{
+    height: 350px;
+  }
+} 
