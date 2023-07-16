@@ -1136,6 +1136,10 @@ nav > ul > li > a:hover {
     font-size: 1.3rem;
   }
 
+  header > .header > nav > ul{
+    width: 50vw;
+  }
+
   main > .tickets-menu > .flight-preview > .travel-date{
     align-self: center;
   }
