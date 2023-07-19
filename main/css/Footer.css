@@ -1,0 +1,129 @@
+footer{
+    width: 100%;
+    color: white;
+    background: #4b6cb7; 
+    background: linear-gradient(to right, #182848, #263559);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > .left-footer{
+    display: flex;
+    flex: 1;
+}
+
+footer > .left-footer > .footer-nav{
+    display: flex;
+}
+
+footer > .left-footer > .footer-nav > .about-us{
+    margin: 15px 0 30px 0;
+    text-align: center;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer > .right-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+}
+
+footer > .right-footer > nav{
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > .right-footer .social-media-icons{
+    color: white;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+footer nav{
+    max-width: 53%;
+    flex: 1;
+    margin-right: 50px;
+}
+
+footer nav > ul{
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav > ul > li{
+    margin-top: 15px;
+}
+
+footer nav > ul > li > a{
+    color: white;
+    text-decoration: none;
+}
+
+footer nav > ul > li > a:hover{
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1350px){
+    footer > .left-footer .footer-nav{
+        margin-right: unset;
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    footer > .left-footer .footer-nav{
+        margin-right: unset;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    footer > .left-footer .footer-nav,
+    footer > .right-footer {
+      flex-direction: column;
+      align-items: center;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    footer > .right-footer .social-media-title{
+        text-align: center;
+    }
+
+    nav > ul{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer > .left-footer > .footer-nav > .about-us{
+        width: 100%;
+    }
+
+    footer > .right-footer{
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    footer > .right-footer > nav{
+        margin-right: 0;
+    }
+}

@@ -4451,14 +4451,3 @@ bookTicketBtn.addEventListener('click', e => {
     }, 7000)
 
 })
-
-// Responsive settings
-document.querySelector('.open-menu').addEventListener('click', e => {
-    document.querySelector('header .menu').classList.add('open');
-    document.getElementById("bg").classList.add('hide');
-});
-
-document.querySelector('.close-menu').addEventListener('click', e => {
-    document.querySelector('header .menu').classList.remove('open');
-    document.getElementById("bg").classList.remove('hide');
-});

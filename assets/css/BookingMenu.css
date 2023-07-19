@@ -1,0 +1,299 @@
+main > .booking-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .booking-menu > .top #bg {
+  height: 587px;
+}
+
+main > .booking-menu > .top #logo-2 {
+  width: 150px;
+  height: 113px;
+}
+
+main > .booking-menu > .top p {
+  margin: 0;
+}
+
+main > .booking-menu > .top .figure {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+main > .booking-menu > .top .figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  color: white;
+  text-align: center;
+}
+
+main > .booking-menu > .top .figure h1 {
+  margin: 0;
+}
+
+main > .booking-menu > .bottom {
+  width: 100%;
+  padding: 20px 0px 0px 20px;
+  background-color: rgb(28, 28, 142);
+}
+
+main > .booking-menu > .bottom .inputs {
+  color: white;
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main > .booking-menu > .bottom .inputs .radios {
+  align-self: flex-start;
+  display: flex;
+}
+
+main > .booking-menu > .bottom #label-one-way,
+main > .booking-menu > .bottom #label-roundtrip {
+  margin-right: 50px;
+}
+
+main > .booking-menu > .bottom .other-inputs {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+main > .booking-menu > .bottom .flex {
+  display: flex;
+  flex-direction: column;
+}
+
+main > .booking-menu > .bottom .bottom-inputs {
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  margin-right: 25px;
+  font-size: 17pt;
+  border: none;
+  outline: none;
+}
+
+main > .booking-menu > .bottom .from-to-inputs {
+  width: 170px;
+  height: 50px;
+  border-radius: 15px;
+  margin-right: 25px;
+  font-size: 17pt;
+  border: none;
+  outline: none;
+}
+
+main > .booking-menu > .bottom .passengers-input {
+  width: 150px;
+  height: 50px;
+  font-size: 18pt;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+}
+
+main > .booking-menu > .bottom .search-button {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 50px;
+  color: white;
+  background-color: rgb(19, 118, 157);
+  border: none;
+  outline: none;
+  font-size: large;
+}
+
+main > .booking-menu > .bottom .search-button:hover {
+  cursor: pointer;
+  background-color: rgb(77, 77, 202);
+}
+
+main > .booking-menu .modal {
+  border-radius: 10px;
+  padding: 16px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  background-color: rgb(0, 0, 85);
+}
+
+main > .booking-menu .modal > span {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+main > .booking-menu .modal .back-button {
+  border: none;
+  outline: none;
+  background-color: rgb(250, 13, 0);
+  color: white;
+  width: 100px;
+  height: 50px;
+  text-transform: uppercase;
+}
+
+main > .booking-menu .modal .back-button:hover {
+  cursor: pointer;
+  background-color: rgb(144, 2, 2);
+}
+
+@media only screen and (max-width: 1100px) {
+  main > .booking-menu > .mobile-desc{
+    display: block !important;
+    color: white;
+    text-align: center;
+    width: 480px;
+  }
+
+  main > .booking-menu > .mobile-desc > h1{
+    font-size: 2em;
+  }
+
+  main > .booking-menu > .mobile-desc > span{
+    display: inline-block;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+  }
+
+  main > .booking-menu > .top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  main > .booking-menu > .top .figure figcaption {
+    display: none;
+  }
+
+  main > .booking-menu > .top #bg {
+    height: 257px;
+  }
+
+  main > .booking-menu > .top #bg.hide {
+    display: none;
+  }
+
+  main > .booking-menu > .top h1,
+  main > .booking-menu p {
+    display: none;
+  }
+
+  main > .booking-menu > .bottom {
+    width: 100%;
+  }
+
+  main > .booking-menu > .bottom .bottom-inputs,
+  main > .booking-menu > .bottom .from-to-inputs {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  main > .booking-menu > .bottom .other-inputs {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main > .booking-menu > .bottom .search-button {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  main > .booking-menu .modal{
+    width: 500px;
+  }
+
+  main > .booking-menu .modal > span{
+    font-size: unset;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main > .booking-menu > .mobile-desc{
+    width: 370px;
+  }
+
+  main > .booking-menu > .mobile-desc > span {
+    font-size: 1em;
+  }
+
+  main > .booking-menu > .top #bg {
+    height: 200px;
+  }
+
+  main > .booking-menu > .bottom {
+    width: 100%;
+  }
+
+  main > .booking-menu > .bottom > .inputs > .radios {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main > .booking-menu > .bottom .bottom-inputs,
+  main > .booking-menu > .bottom .from-to-inputs {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 550px){
+  main > .booking-menu .modal{
+    width: 300px;
+  }
+
+  main > .booking-menu .modal > span{
+    font-size: .7em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main > .booking-menu > .mobile-desc{
+    width: 260px;
+  }
+
+  main > .booking-menu > .top #bg {
+    height: 140px;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  main > .booking-menu .modal{
+    width: 250px;
+    height: 220px;
+  }
+
+  main > .booking-menu .modal > span{
+    font-size: .6em;
+  }
+}
+
+@media only screen and (min-height: 1100px) {
+  main > .booking-menu {
+    height: 100vh;
+  }
+}

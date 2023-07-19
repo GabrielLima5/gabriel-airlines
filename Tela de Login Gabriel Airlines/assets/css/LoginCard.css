@@ -1,0 +1,139 @@
+section {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section > .card-login {
+  width: 710px;
+  color: white;
+  box-shadow: 0px 10px 40px #00000056;
+  border-radius: 15px;
+  padding: 16px;
+  background: #052255;
+  display: flex;
+  flex-direction: column;
+}
+
+section > .card-login > .login-top {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+section > .card-login > .login-top > .logo-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section > .card-login > .login-top > .logo-image > img {
+  width: 250px;
+}
+
+section > .card-login > .login-top > .login-text {
+  width: 50%;
+  text-align: center;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section > .card-login > .login-top > .login-text > h1 {
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 2px;
+}
+
+section > .card-login > .login-top > .login-text > p {
+  font-size: 1.2em;
+}
+
+section > .card-login > .text-fields {
+  max-width: 400px;
+  margin: auto;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section > .card-login > .text-fields > label {
+  align-self: flex-start;
+}
+
+section > .card-login > .text-fields > input {
+  font-size: 1rem;
+  color: black;
+  border-radius: 10px;
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: none;
+  outline: none;
+}
+
+section > .card-login > .text-fields > button {
+  color: white;
+  background-color: rgb(40 87 153);
+  border: none;
+  outline: none;
+  width: 50%;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 1.2em;
+  font-family: "Ysabeau Infant", sans-serif;
+}
+
+section > .card-login > .text-fields > button:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+@media only screen and (max-width: 900px) {
+  section > .card-login {
+    width: 534px;
+    height: 760px;
+  }
+
+  section > .card-login > .login-top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section > .card-login {
+    width: 300px;
+    height: 600px;
+  }
+
+  section > .card-login > .login-top > .login-text > p {
+    display: none;
+  }
+
+  section > .card-login > .text-fields > input {
+    width: 240px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  section > .card-login {
+    width: 230px;
+  }
+
+  section > .card-login > .text-fields > input {
+    width: 190px;
+  }
+}
+
+@media only screen and (min-height: 1100px) {
+  section {
+    height: 100vh;
+  }
+}

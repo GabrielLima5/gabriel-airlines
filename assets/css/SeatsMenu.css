@@ -1,0 +1,422 @@
+main > .seats-menu{
+    width: 1100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .flight-info > .buy-ticket-btn,
+main > .seats-menu > .seats-preview > .final-info > .flight-info > .select-seats-return,
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info button{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background:rgb(0, 5, 90);
+    color: white;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .flight-info > .buy-ticket-btn:hover,
+main > .seats-menu > .seats-preview > .final-info > .flight-info > .select-seats-return:hover{
+    cursor: pointer;
+    background: black;
+}
+  
+main > .seats-menu{
+    align-items: center;
+}
+  
+main > .seats-menu > h1{
+    font-size: 3em;
+    margin: 20px 0;
+}
+  
+main > .seats-menu > p{
+    font-size: 1.4rem;
+    text-align: center;
+}
+  
+main > .seats-menu > .redo-search{
+    align-self: flex-start;
+    margin-top: 15px;
+}
+  
+main > .seats-menu > .seats-preview{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map{
+    background-color: white;
+    width: 400px;
+    color: black;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    padding: 16px;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map .exit{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map .exit:nth-child(1){
+    margin-top: 200px;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map .exit > span{
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: red;
+    color: white;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map .seats{
+    display: flex;
+    justify-content: flex-start;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map .seat{
+    display: flex;
+    position: relative;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map .seat:nth-child(3){
+    margin-right: 70px;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map .seat > label{
+    position: relative;
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: lightgreen;
+    padding: 4px;
+    border-radius: 5px;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map .seat > label:hover{
+    cursor: pointer;
+    background-color: yellow;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map .seat > input[type=checkbox]{
+    position: absolute;
+}
+  
+main > .seats-menu > .seats-preview > .seats-map .seat input[type=checkbox]:checked + label{
+    background-color: red;
+}
+  
+main > .seats-menu > .seats-preview > .selected-seats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+main > .seats-menu > .seats-preview > .final-info,
+main > .seats-menu > .seats-preview > .final-info > .selected-seats,
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info{
+    width: 600px;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .selected-seats > span{
+    font-size: 1.5em;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .selected-seats > .seat-alert{
+    color: #deff89;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+  
+main > .seats-menu > .seats-preview > .final-info,
+main > .seats-menu > .seats-preview > .final-info > .selected-seats,
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info,
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info > .going-flight-info,
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info > .return-flight-info,
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info > .from-card,
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info > .to-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info > .return-flight-info{
+    margin: 80px 0;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info span.departure-time,
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info span.arrival-time{
+    font-size: 1.7em;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info{
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding: 16px 32px;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .going,
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .back{
+    display: flex;
+    align-self: flex-start;
+    font-weight: bold;
+    margin-top: 50px;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .passengers,
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .price{
+    margin-top: 30px;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .final-price > span{
+    margin-top: 10px;
+}
+  
+main > .seats-menu .calc-price{
+    display: flex;
+    flex-direction: column;
+}
+  
+main > .seats-menu .calc-price .calc-price-going,
+main > .seats-menu .calc-price .calc-price-return{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info > i{
+    margin: 0px 30px;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .flight-number{
+    align-self: flex-start;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .duration{
+    margin-top: 50px;
+}
+
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .aircraft {
+    margin: 10px;
+    font-size: 1rem;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .price > .price-number{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .final-price{
+    display: flex;
+    flex-direction: column;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info .final-price > .final-price-number{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .flight-info > .buy-ticket-btn,
+main > .seats-menu > .seats-preview > .final-info > .flight-info > .select-seats-return{
+    width: 100%;
+    font-size: 1.3em;
+    padding: 5px;
+}
+  
+main > .seats-menu .selected-seats-span{
+    font-size: 2em;
+    font-weight: bold;
+}
+  
+main > .seats-menu .flight-info-span{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info button{
+    margin: 30px 0;
+    width: 75%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+  
+main > .seats-menu > .seats-preview > .final-info > .final-flight-info button:disabled{
+    opacity: .5;
+    background-color: rgb(178, 185, 192);
+    cursor: not-allowed
+}
+
+@media only screen and (max-width: 1100px) {
+    main > .seats-menu{
+      width: 900px;
+    }
+  
+    main > .seats-menu > .seats-preview > .final-info,
+    main > .seats-menu > .seats-preview > .final-info > .selected-seats,
+    main > .seats-menu > .seats-preview > .final-info > .final-flight-info{
+      width: 500px;
+    } 
+}
+
+@media only screen and (max-width: 1000px){
+    main > .seats-menu,
+    main > .seats-menu > .seats-preview{
+      width: 700px;
+    }
+  
+    main > .seats-menu > .seats-preview{
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    main > .seats-menu > .seats-preview > .seats-map{
+      margin-bottom: 50px;
+    }
+  
+    main > .seats-menu > .seats-preview > .final-info,
+    main > .seats-menu > .seats-preview > .final-info > .selected-seats{
+      width: 250px;
+    }
+  
+    main > .seats-menu > .seats-preview > .final-info > .selected-seats > span{
+      font-size: 1.3em;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    main > .seats-menu, main > .seats-menu > .seats-preview{
+      width: 550px;
+    }
+  
+    main > .seats-menu > .seats-preview > .seats-map{
+      width: 280px;
+    }
+  
+    main > .seats-menu > .seats-preview > .seats-map .seat > label{
+      width: 25px;
+      font-size: .7em;
+    }
+  
+    main > .seats-menu > .seats-preview > .seats-map .seat:nth-child(3){
+      margin-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info > i{
+      margin: 20px 30px;
+    }
+}
+  
+@media only screen and (max-width: 600px) {
+    main > .seats-menu,
+    main > .seats-menu > .seats-preview{
+      width: 400px;
+    }
+  
+    main > .seats-menu > .seats-preview{
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    main > .seats-menu > h1{
+      font-size: 2.5em;
+    }
+    
+    main > .seats-menu > .seats-preview > .seats-map{
+      width: 300px;
+    }
+  
+    main > .seats-menu > .seats-preview > .final-info{
+      margin: 50px 0;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info{
+      flex-direction: column;
+    }
+  
+    main > .seats-menu > .seats-preview > .final-info,
+    main > .seats-menu > .seats-preview > .final-info > .selected-seats,
+    main > .seats-menu > .seats-preview > .final-info > .final-flight-info{
+      width: 400px;
+      font-size: 1.1em;
+    } 
+  
+    main > .seats-menu > .seats-preview > .seats-map .seat > label{
+      font-size: .6em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    main > .seats-menu,
+    main > .seats-menu > .seats-preview,
+    main > .seats-menu > .seats-preview > .seats-map{
+      width: 300px;
+    }
+  
+    main > .seats-menu > h1{
+      text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    main > .seats-menu > .seats-preview > .final-info,
+    main > .seats-menu > .seats-preview > .final-info > .selected-seats,
+    main > .seats-menu > .seats-preview > .final-info > .final-flight-info{
+      width: 300px;
+      font-size: 1em;
+    } 
+
+    main > .seats-menu > .seats-preview > .final-info > .final-flight-info button{
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    main > .seats-menu,
+    main > .seats-menu > .seats-preview,
+    main > .seats-menu > .seats-preview > .seats-map{
+      width: 250px;
+    }
+  
+    main > .seats-menu > .seats-preview > .seats-map .seat:nth-child(3){
+      margin-right: 20px;
+    }
+  
+    main > .seats-menu > .seats-preview > .final-info,
+    main > .seats-menu > .seats-preview > .final-info > .selected-seats,
+    main > .seats-menu > .seats-preview > .final-info > .final-flight-info{
+      width: 270px;
+    } 
+}
+  

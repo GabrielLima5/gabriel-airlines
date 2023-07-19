@@ -1,0 +1,304 @@
+main > .tickets-menu{
+    width: 1100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+main > .tickets-menu{
+    align-items: flex-start;
+}
+  
+main > .tickets-menu > .redo-search{
+    width: inherit;
+    margin-top: 20px;
+}
+  
+main > .tickets-menu > .redo-search > span{
+    margin-left: 5px;
+    text-align: left;
+    text-decoration: underline;
+    cursor: pointer;
+}
+  
+main > .tickets-menu > .flight-preview{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+  
+main > .tickets-menu > .flight-preview > .origin-and-destination{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+  
+main > .tickets-menu > .flight-preview .fa-arrow-down{
+    display: none;
+}
+  
+main > .tickets-menu > .flight-preview span{
+    font-size: 1.6em;
+}
+  
+main > .tickets-menu > .flight-preview i,
+main > .tickets-menu .flight-cards > .flight-card > .flight-info > .from-to-info > i{
+    margin: 0 30px;
+}
+  
+  
+main > .tickets-menu .flight-cards,
+main > .tickets-menu .flight-cards > .flight-card,
+main > .tickets-menu .flight-cards > .flight-card > .flight-info > .price-info,
+main > .tickets-menu .flight-cards > .flight-card > .flight-info > .from-to-info > .from-card,
+main > .tickets-menu .flight-cards > .flight-card > .flight-info > .from-to-info > .to-card{
+    display: flex;
+    flex-direction: column;
+}
+  
+main > .tickets-menu .flight-cards,
+main > .tickets-menu .one-way,
+main > .tickets-menu .return{
+    width: 100%;
+}
+  
+main > .tickets-menu .price-info .total-price{
+    font-size: 1rem;
+}
+  
+main .total-price-final{
+    font-size: 1.2rem;
+}
+  
+main > .tickets-menu .flight-cards{
+    font-size: 1.5em;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+  
+main > .tickets-menu .flight-cards > .flight-card{
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding: 32px 8px 16px 8px;
+}
+  
+main > .tickets-menu .flight-cards > .flight-card > .flight-info,
+main > .tickets-menu .flight-cards > .flight-card > .flight-info > .from-to-info{
+    display: flex;
+    align-items: center;
+}
+  
+main > .tickets-menu .flight-cards > .flight-card > .flight-info{
+    justify-content: space-between;
+}
+  
+main > .tickets-menu .flight-cards span.departure-time,
+main > .tickets-menu .flight-cards span.arrival-time,
+main > .tickets-menu .flight-cards span.price-number{
+    font-size: 2em;
+}
+  
+main > .tickets-menu .flight-cards > .flight-card > .flight-info > .price-info{
+    align-items: center;
+}
+
+main > .tickets-menu .flight-cards > .flight-card > .flight-info > .price-info > button{
+  text-transform: uppercase;
+  font-size: 0.8em;
+  width: 200px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background:rgb(0, 5, 90);
+  color: white;
+}
+
+main > .tickets-menu .flight-cards > .flight-card > .flight-info > .price-info > button:hover{
+    cursor: pointer;
+    background: black;
+}
+
+main > .tickets-menu .flight-cards > .flight-card > .other-info{
+    font-size: 0.7em;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+  
+main > .tickets-menu .flight-cards .duration > span{
+    margin-right: 175px;
+}
+
+@media only screen and (max-width: 1200px){
+    main > .tickets-menu,
+    main > .tickets-menu .flight-cards{
+        width: 900px;
+    }
+
+    main > .tickets-menu{
+        align-items: center;
+    }
+
+    main > .tickets-menu .flight-cards .duration > span{
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    main > .tickets-menu .flight-cards .from-card > span,
+    main > .tickets-menu .flight-cards .to-card > span{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    main > .tickets-menu,
+    main > .tickets-menu .flight-cards{
+      width: 700px;
+    }
+  
+    main > .tickets-menu .flight-cards > .flight-card > .flight-info > .from-to-info > i{
+      margin: 0 35px 0 35px;
+    }
+  
+    main > .tickets-menu .flight-cards > .flight-card > .flight-info > .from-to-info > .to-card{
+      margin-right: 15px;
+    }
+  
+    main > .tickets-menu .flight-cards .duration > span{
+      margin-left: 160px;
+    }
+}  
+  
+@media only screen and (max-width: 700px){
+    main > .tickets-menu > .flight-preview > .travel-date{
+      display: inline-block;
+      align-self: flex-start;
+    }
+  
+    main > .tickets-menu,
+    main > .tickets-menu .flight-cards{
+      width: 525px;
+    }
+  
+    main > .tickets-menu > .flight-preview{
+      display: flex;
+    }
+  
+    main > .tickets-menu .flight-cards > .flight-card{
+      flex-direction: row;
+    }
+  
+    main > .tickets-menu .flight-cards > .flight-card > .flight-info,
+    main > .tickets-menu .flight-cards > .flight-card > .other-info{
+      flex-direction: column;
+    }
+  
+    main > .tickets-menu .flight-cards > .flight-card > .flight-info{
+      width: 300px;
+    }
+  
+    main > .tickets-menu .flight-cards > .flight-card > .other-info{
+      width: 200px;
+    }
+  
+    main > .tickets-menu .flight-cards > .flight-card > .other-info > div {
+      display: flex;
+      justify-content: center;
+    }
+  
+    main > .tickets-menu .flight-cards .duration > span{
+      margin: 0;
+    }
+  
+    main > .tickets-menu .flight-preview,
+    main > .tickets-menu .flight-cards .from-card > span,
+    main > .tickets-menu .flight-cards .to-card > span{
+      text-align: center;
+    }
+  
+    main > .tickets-menu .flight-cards,
+    main > .tickets-menu .flight-cards span.departure-time,
+    main > .tickets-menu .flight-cards span.arrival-time,
+    main > .tickets-menu .flight-cards span.price-number{
+      font-size: 1.2em;
+    }
+  
+    main > .tickets-menu .flight-cards > .flight-card > .flight-info > .from-to-info{
+      margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    main > .tickets-menu > .flight-preview > .travel-date{
+      align-self: center;
+    }
+  
+    main > .tickets-menu > .flight-preview i{
+      margin: 10px 0;
+    }
+  
+    main > .tickets-menu .flight-cards > .flight-card > .other-info{
+      font-size: 0.6em;
+    }
+
+    main > .tickets-menu > .flight-preview{
+        margin-bottom: 50px;
+    }
+    
+    main > .tickets-menu,
+    main > .tickets-menu .flight-cards{
+        width: 350px;
+    }
+    
+    main > .tickets-menu,
+    main > .tickets-menu .flight-cards > .flight-card{
+        align-items: center;
+    }
+    
+    main > .tickets-menu .flight-preview .fa-arrow-right{
+        display: none;
+    }
+    
+    main > .tickets-menu .flight-preview .fa-arrow-down{
+        display: block;
+    }
+    
+    main > .tickets-menu > .flight-preview > .origin-and-destination{
+        flex-direction: column;
+    }
+      
+    main > .tickets-menu > .flight-preview > .origin-and-destination > span,
+    main > .tickets-menu > .flight-preview > .origin-and-destination > i{
+        width: 100%;
+    }
+      
+    main > .tickets-menu, 
+    main > .tickets-menu > .flight-preview,
+    main > .tickets-menu .flight-cards > .flight-card{
+        flex-direction: column;
+    }
+
+    main > .tickets-menu .flight-cards > .flight-card > .flight-info > .final-flight-info i{
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    main > .tickets-menu,
+    main > .tickets-menu .flight-cards,
+    main > .tickets-menu .flight-cards > .flight-card > .flight-info{
+      width: 280px;
+    }
+  
+    main > .tickets-menu .flight-cards > .flight-card > .flight-info{
+      margin: 0;
+    }
+}
+
+@media only screen and (max-width: 350px){
+  main > .tickets-menu .flight-cards > .flight-card > .flight-info > .from-to-info > i{
+    margin: 0 5px;
+  }
+}
