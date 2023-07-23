@@ -30,9 +30,8 @@
     display: flex !important;
 }
   
-.error-span,
-.same-value-span,
-.date-error-span{
+.alert-span{
+    font-size: .9rem;
     margin-bottom: 10px;
     text-align: center;
 }

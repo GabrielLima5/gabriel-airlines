@@ -50,8 +50,9 @@ export function validateCityInputs(){
 
     if (from.value === 'Selecionar' || to.value === 'Selecionar'){
         isValid = false;
-        addClass(from.value === 'Selecionar' ? from : to, "has-error");
-        removeClass(from.value === 'Selecionar' ? document.querySelector(".invalid-from") : document.querySelector('.invalid-to'), "hide");
+        addClass(from, 'has-error');
+        addClass(to, 'has-error')
+        removeClass(document.querySelector(".invalid"), "hide");
     } else{
         isValid = true;
     }
@@ -72,7 +73,7 @@ function validateReturnInput(input){
         validate(input, spanError)
     }
     if (departureDate.value > returnDate.value){
-        validate(departureDate, dateError)
+        validate(departureDate, dateError, returnDate)
     } else if (departureDate.value == '' || returnDate.value == ''){
         validate(returnDate, spanError, departureDate)
     }
@@ -113,7 +114,7 @@ export function validateGeneralInputs(){
             validateReturnInput(input)
         } else if (radioOneWay.checked){
             if (departureDate.value === ''){
-                validateEmpty(departureDate)
+                validate(departureDate, dateError)
             }
         }
     })
