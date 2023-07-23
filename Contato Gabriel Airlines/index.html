@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="../main/css/Header.css">
@@ -13,6 +14,9 @@
 </head>
 <body>
     <div class="container">
+        
+        <div class="fade hide"></div>
+
         <header>
             <div class="header">
                 <a href="../index.html"><img id="logo-1" src="assets/images/logo 1.png" alt="Logo Gabriel Airlines"></a>
@@ -51,17 +55,17 @@
 
                     <div class="input">
                         <label for="fullname">Nome completo *</label>
-                        <input type="text" name="fullname" placeholder="Nome completo" id="fullname" required>
+                        <input type="text" name="fullname" autocomplete="off" placeholder="Nome completo" id="fullname" required>
                     </div>
                 
                     <div class="input">
                         <label for="email">E-mail *</label>
-                        <input type="email" name="email" placeholder="Email" id="email" required>
+                        <input type="email" name="email" autocomplete="on" placeholder="Email" id="email" required>
                     </div>
 
                     <div class="input">
                         <label for="tel">Telefone (com DDD) *</label>
-                        <input type="number" name="tel" placeholder="Telefone" id="tel" required>
+                        <input type="number" name="tel" autocomplete="on" placeholder="Telefone" id="tel" required>
                     </div>
 
                     <div class="input">
