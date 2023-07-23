@@ -74,6 +74,7 @@
                             <div class="flex">
                                 <label for="from">Origem:</label>
                                 <select class="bottom-inputs" id="from" required>
+                                    <option value="Selecionar" selected></option>
                                     <optgroup label="Sudeste">
                                         <option value="SP - Guarulhos (GRU)">SP - Guarulhos (GRU)</option>
                                         <option value="SP - Congonhas (CGH)">SP - Congonhas (CGH)</option>
@@ -92,7 +93,7 @@
 
                                     <optgroup label="Centro-Oeste">
                                         <option value="Goiânia (GYN)">Goiânia (GYN)</option>
-                                        <option value="Brasília (BSB)" selected>Brasília (BSB)</option>
+                                        <option value="Brasília (BSB)">Brasília (BSB)</option>
                                         <option value="Campo Grande (CGR)">Campo Grande (CGR)</option>
                                         <option value="Cuiabá (CGB)">Cuiabá (CGB)</option>
                                     </optgroup>
@@ -122,11 +123,12 @@
                             </div>
 
                             <div class="flex">
-                                <label for="to">Origem:</label>
+                                <label for="to">Destino:</label>
                                 <select class="bottom-inputs" id="to" required>
+                                    <option value="Selecionar" selected></option>
                                     <optgroup label="Sudeste">
                                         <option value="SP - Guarulhos (GRU)">SP - Guarulhos (GRU)</option>
-                                        <option value="SP - Congonhas (CGH)" selected>SP - Congonhas (CGH)</option>
+                                        <option value="SP - Congonhas (CGH)">SP - Congonhas (CGH)</option>
                                         <option value="Campinas (VCP)">Campinas (VCP)</option>
                                         <option value="RJ - Galeão (GIG)">RJ - Galeão (GIG)</option>
                                         <option value="RJ - Santos Dumont (SDU)">RJ - Santos Dumont (SDU)</option>
@@ -210,7 +212,8 @@
                         <span class="error-span hide">Campo obrigatório não preenchido.</span>
                         <span class="same-value-span hide">Origem e destino são os mesmos.</span>
                         <span class="date-error-span hide">Data inválida.</span>
-                        <span class="invalid hide">Origem e/ou destino inválidos.</span>
+                        <span class="invalid-from hide">Origem inválida.</span>
+                        <span class="invalid-to hide">Destino inválido.</span>
                     </div>
                 </div>
             </section>

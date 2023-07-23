@@ -26,6 +26,7 @@ main > .tickets-menu > .flight-preview{
     margin-top: 50px;
     display: flex;
     flex-direction: column-reverse;
+    font-size: 1.1rem;
 }
   
 main > .tickets-menu > .flight-preview > .origin-and-destination{
@@ -295,10 +296,13 @@ main > .tickets-menu .flight-cards .duration > span{
     main > .tickets-menu .flight-cards > .flight-card > .flight-info{
       margin: 0;
     }
-}
 
-@media only screen and (max-width: 350px){
+    main > .tickets-menu .flight-cards .from-card, 
+    main > .tickets-menu .flight-cards .to-card {
+      width: unset;
+  }
+  
   main > .tickets-menu .flight-cards > .flight-card > .flight-info > .from-to-info > i{
-    margin: 0 5px;
+    margin: 0 15px;
   }
 }

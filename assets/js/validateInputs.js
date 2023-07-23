@@ -34,57 +34,26 @@ export function inputRadioEvents(){
 export function clearErrors(){
     inputs.forEach(input => {
         removeClass(input, 'has-error')
-    })
-    
+    });
+
+    removeClass(from, 'has-error')
+    removeClass(to, 'has-error')
+
     spans.forEach(span => {
         addClass(span, 'hide')
-    })
+    });
 }
 
 export function validateCityInputs(){
     clearErrors()
-
     const cities = ["SP - Guarulhos (GRU)", "SP - Congonhas (CGH)", "Campinas (VCP)", "RJ - Galeão (GIG)", "RJ - Santos Dumont (SDU)", "Curitiba (CWB)", "Florianópolis (FLN)", "Porto Alegre (POA)", "Vitória (VIX)", "BH - Confins (CNF)", "Goiânia (GYN)", "Brasília (BSB)", "Campo Grande (CGR)", "Cuiabá (CGB)", "Manaus (MAO)", "Rio Branco (RBR)", "Porto Velho (PVH)", "Boa Vista (BVB)", "Macapá (MCP)", "Belém (BEL)", "Palmas (PMW)", "São Luís (SLZ)", "Fortaleza (FOR)", "Natal (NAT)", "Teresina (THE)", "João Pessoa (JPA)", "Recife (REC)", "Maceió (MCZ)", "Aracaju (AJU)", "Salvador (SSA)"]
 
-    switch(from.value && to.value){
-        case "SP - Guarulhos (GRU)":
-        case "SP - Congonhas (CGH)":
-        case "Campinas (VCP)":
-        case "RJ - Galeão (GIG)":
-        case "RJ - Santos Dumont (SDU)":
-        case "Curitiba (CWB)":
-        case "Florianópolis (FLN)":
-        case "Porto Alegre (POA)":
-        case "Vitória (VIX)":
-        case "BH - Confins (CNF)":
-        case "Goiânia (GYN)":
-        case "Brasília (BSB)":
-        case "Campo Grande (CGR)":
-        case "Cuiabá (CGB)":
-        case "Manaus (MAO)":
-        case "Rio Branco (RBR)":
-        case "Porto Velho (PVH)":
-        case "Boa Vista (BVB)":
-        case "Macapá (MCP)":
-        case "Belém (BEL)":
-        case "Palmas (PMW)":
-        case "São Luís (SLZ)":
-        case "Fortaleza (FOR)":
-        case "Natal (NAT)":
-        case "Teresina (THE)":
-        case "João Pessoa (JPA)":
-        case "Recife (REC)":
-        case "Maceió (MCZ)":
-        case "Aracaju (AJU)":
-        case "Salvador (SSA)":
-            isValid = true;
-            break;
-
-        default:
-            isValid = false;
-            addClass(from, "has-error");
-            addClass(to, "has-error");
-            removeClass(document.querySelector(".invalid"), "hide");
+    if (from.value === 'Selecionar' || to.value === 'Selecionar'){
+        isValid = false;
+        addClass(from.value === 'Selecionar' ? from : to, "has-error");
+        removeClass(from.value === 'Selecionar' ? document.querySelector(".invalid-from") : document.querySelector('.invalid-to'), "hide");
+    } else{
+        isValid = true;
     }
 }
 
