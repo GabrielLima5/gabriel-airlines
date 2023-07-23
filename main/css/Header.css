@@ -78,6 +78,7 @@ nav > ul > li > a:hover {
     background: linear-gradient(to right, #182848, #4b6cb7);
     margin: 0;
     transition: right 0.2s linear;
+    z-index: 100;
   }
 
   header .header nav .open-menu {

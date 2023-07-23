@@ -28,7 +28,7 @@
 
                     <ul>
                         <button class="close-menu"><i class="fas fa-times fa-2x"></i></button>
-                        <li><a href="#">Comprar passagem</a></li>
+                        <li><a href="#" onclick="window.location.reload()">Comprar passagem</a></li>
                         <li><a href="Frota Gabriel Airlines/index.html">Nossa frota</a></li>
                         <li><a href="Destinos Gabriel Airlines/index.html">Nossos destinos</a></li>
                         <li><a href="Contato Gabriel Airlines/index.html">Contato</a></li>
@@ -72,44 +72,102 @@
                         <div class="other-inputs">
                             <div class="flex">
                                 <label for="from">Origem:</label>
-                                <input type="text" name="from" id="from" class="bottom-inputs" list="airports" required>
-                                <datalist id="airports">
-                                    <option value="SP - Guarulhos (GRU)">GRU</option>
-                                    <option value="SP - Congonhas (CGH)">CGH</option>
-                                    <option value="Campinas (VCP)">VCP</option>
-                                    <option value="RJ - Galeão (GIG)">GIG</option>
-                                    <option value="RJ - Santos Dumont (SDU)">SDU</option>
-                                    <option value="Curitiba (CWB)">CWB</option>
-                                    <option value="Florianópolis (FLN)">FLN</option>
-                                    <option value="Porto Alegre (POA)">POA</option>
-                                    <option value="Vitória (VIX)">VIX</option>
-                                    <option value="BH - Confins (CNF)">CNF</option>
-                                    <option value="Goiânia (GYN)">GYN</option>
-                                    <option value="Brasília (BSB)">BSB</option>
-                                    <option value="Campo Grande (CGR)">CGR</option>
-                                    <option value="Cuiabá (CGB)">CGB</option>
-                                    <option value="Manaus (MAO)">MAO</option>
-                                    <option value="Rio Branco (RBR)">RBR</option>
-                                    <option value="Porto Velho (PVH)">PVH</option>
-                                    <option value="Boa Vista (BVB)">BVB</option>
-                                    <option value="Macapá (MCP)">MCP</option>
-                                    <option value="Belém (BEL)">BEL</option>
-                                    <option value="Palmas (PMW)">PMW</option>
-                                    <option value="São Luís (SLZ)">SLZ</option>
-                                    <option value="Fortaleza (FOR)">FOR</option>
-                                    <option value="Natal (NAT)">NAT</option>
-                                    <option value="Teresina (THE)">THE</option>
-                                    <option value="João Pessoa (JPA)">JPA</option>
-                                    <option value="Recife (REC)">REC</option>
-                                    <option value="Maceió (MCZ)">MCZ</option>
-                                    <option value="Aracaju (AJU)">AJU</option>
-                                    <option value="Salvador (SSA)">SSA</option>
-                                </datalist>
+                                <select class="bottom-inputs" id="from" required>
+                                    <optgroup label="Sudeste">
+                                        <option value="SP - Guarulhos (GRU)">SP - Guarulhos (GRU)</option>
+                                        <option value="SP - Congonhas (CGH)">SP - Congonhas (CGH)</option>
+                                        <option value="Campinas (VCP)">Campinas (VCP)</option>
+                                        <option value="RJ - Galeão (GIG)">RJ - Galeão (GIG)</option>
+                                        <option value="RJ - Santos Dumont (SDU)">RJ - Santos Dumont (SDU)</option>
+                                        <option value="Vitória (VIX)">Vitória (VIX)</option>
+                                        <option value="BH - Confins (CNF)">BH - Confins (CNF)</option>
+                                    </optgroup>
+
+                                    <optgroup label="Sul">
+                                        <option value="Curitiba (CWB)">Curitiba (CWB)</option>
+                                        <option value="Florianópolis (FLN)">Florianópolis (FLN)</option>
+                                        <option value="Porto Alegre (POA)">Porto Alegre (POA)</option>
+                                    </optgroup>
+
+                                    <optgroup label="Centro-Oeste">
+                                        <option value="Goiânia (GYN)">Goiânia (GYN)</option>
+                                        <option value="Brasília (BSB)" selected>Brasília (BSB)</option>
+                                        <option value="Campo Grande (CGR)">Campo Grande (CGR)</option>
+                                        <option value="Cuiabá (CGB)">Cuiabá (CGB)</option>
+                                    </optgroup>
+
+                                    <optgroup label="Norte">
+                                        <option value="Manaus (MAO)">Manaus (MAO)</option>
+                                        <option value="Rio Branco (RBR)">Rio Branco (RBR)</option>
+                                        <option value="Porto Velho (PVH)">Porto Velho (PVH)</option>
+                                        <option value="Boa Vista (BVB)">Boa Vista (BVB)</option>
+                                        <option value="Macapá (MCP)">Macapá (MCP)</option>
+                                        <option value="Belém (BEL)">Belém (BEL)</option>
+                                        <option value="Palmas (PMW)">Palmas (PMW)</option>
+                                    </optgroup>
+                                    
+                                    <optgroup label="Nordeste">
+                                        <option value="São Luís (SLZ)">São Luís (SLZ)</option>
+                                        <option value="Fortaleza (FOR)">Fortaleza (FOR)</option>
+                                        <option value="Natal (NAT)">Natal (NAT)</option>
+                                        <option value="Teresina (THE)">Teresina (THE)</option>
+                                        <option value="João Pessoa (JPA)">João Pessoa (JPA)</option>
+                                        <option value="Recife (REC)">Recife (REC)</option>
+                                        <option value="Maceió (MCZ)">Maceió (MCZ)</option>
+                                        <option value="Aracaju (AJU)">Aracaju (AJU)</option>
+                                        <option value="Salvador (SSA)">Salvador (SSA)</option>
+                                    </optgroup>
+                                </select>
                             </div>
 
                             <div class="flex">
-                                <label for="to">Destino:</label>
-                                <input name="to" type="text" id="to" class="bottom-inputs" list="airports" required>
+                                <label for="to">Origem:</label>
+                                <select class="bottom-inputs" id="to" required>
+                                    <optgroup label="Sudeste">
+                                        <option value="SP - Guarulhos (GRU)">SP - Guarulhos (GRU)</option>
+                                        <option value="SP - Congonhas (CGH)" selected>SP - Congonhas (CGH)</option>
+                                        <option value="Campinas (VCP)">Campinas (VCP)</option>
+                                        <option value="RJ - Galeão (GIG)">RJ - Galeão (GIG)</option>
+                                        <option value="RJ - Santos Dumont (SDU)">RJ - Santos Dumont (SDU)</option>
+                                        <option value="Vitória (VIX)">Vitória (VIX)</option>
+                                        <option value="BH - Confins (CNF)">BH - Confins (CNF)</option>
+                                    </optgroup>
+
+                                    <optgroup label="Sul">
+                                        <option value="Curitiba (CWB)">Curitiba (CWB)</option>
+                                        <option value="Florianópolis (FLN)">Florianópolis (FLN)</option>
+                                        <option value="Porto Alegre (POA)">Porto Alegre (POA)</option>
+                                    </optgroup>
+
+                                    <optgroup label="Centro-Oeste">
+                                        <option value="Goiânia (GYN)">Goiânia (GYN)</option>
+                                        <option value="Brasília (BSB)">Brasília (BSB)</option>
+                                        <option value="Campo Grande (CGR)">Campo Grande (CGR)</option>
+                                        <option value="Cuiabá (CGB)">Cuiabá (CGB)</option>
+                                    </optgroup>
+
+                                    <optgroup label="Norte">
+                                        <option value="Manaus (MAO)">Manaus (MAO)</option>
+                                        <option value="Rio Branco (RBR)">Rio Branco (RBR)</option>
+                                        <option value="Porto Velho (PVH)">Porto Velho (PVH)</option>
+                                        <option value="Boa Vista (BVB)">Boa Vista (BVB)</option>
+                                        <option value="Macapá (MCP)">Macapá (MCP)</option>
+                                        <option value="Belém (BEL)">Belém (BEL)</option>
+                                        <option value="Palmas (PMW)">Palmas (PMW)</option>
+                                    </optgroup>
+                                    
+                                    <optgroup label="Nordeste">
+                                        <option value="São Luís (SLZ)">São Luís (SLZ)</option>
+                                        <option value="Fortaleza (FOR)">Fortaleza (FOR)</option>
+                                        <option value="Natal (NAT)">Natal (NAT)</option>
+                                        <option value="Teresina (THE)">Teresina (THE)</option>
+                                        <option value="João Pessoa (JPA)">João Pessoa (JPA)</option>
+                                        <option value="Recife (REC)">Recife (REC)</option>
+                                        <option value="Maceió (MCZ)">Maceió (MCZ)</option>
+                                        <option value="Aracaju (AJU)">Aracaju (AJU)</option>
+                                        <option value="Salvador (SSA)">Salvador (SSA)</option>
+                                    </optgroup>
+                                </select>
                             </div>
 
                             <div class="flex">
@@ -150,14 +208,14 @@
 
                         <span class="error-span hide">Campo obrigatório não preenchido.</span>
                         <span class="same-value-span hide">Origem e destino são os mesmos.</span>
-                        <span class="date-error-span hide">Data de ida ou volta inválida.</span>
+                        <span class="date-error-span hide">Data inválida.</span>
                         <span class="invalid hide">Origem e/ou destino inválidos.</span>
                     </div>
                 </div>
             </section>
 
             <section class="tickets-menu hide" id="going-page">
-                <div class="redo-search">
+                <div class="redo-search" onclick="window.location.reload()">
                     <i class="fa-solid fa-arrow-left"></i>
                     <span>Refazer busca</span>
                 </div>
@@ -1863,7 +1921,14 @@
     </div>
 
     <script src="https://kit.fontawesome.com/e8fd0dd2d0.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js" type="module"></script>
+    <script src="assets/js/utils.js" type="module"></script>
+    <script src="assets/js/randomNumbers.js" type="module"></script>
+    <script src="assets/js/getStats.js" type="module"></script>
+    <script src="assets/js/calcArrivalTime.js" type="module"></script>
+    <script src="assets/js/togglePreload.js" type="module"></script>
+    <script src="assets/js/ticketsController.js" type="module"></script>
+    <script src="assets/js/seatsController.js" type="module"></script>
+    <script src="assets/js/app.js" type="module"></script>
     <script src="main/js/responsive.js"></script>
 </body>
 </html>

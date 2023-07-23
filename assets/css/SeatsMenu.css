@@ -362,7 +362,8 @@ main > .seats-menu > .seats-preview > .final-info > .final-flight-info button:di
 
 @media only screen and (max-width: 550px){
     main > .seats-menu > .seats-preview > .final-info > .final-flight-info .from-to-info{
-      flex-direction: column;
+      margin-top: 30px;
+      font-size: 1.1rem;
     }
   
     main > .seats-menu > .seats-preview > .final-info,
